@@ -1,0 +1,221 @@
+/* Accessibility Toolbar Styles */
+.accessibility-toolbar {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.accessibility-toggle {
+  width: 50px;
+  height: 50px;
+  background-color: #1a472a;
+  color: white;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.accessibility-toggle:hover {
+  background-color: #ff8c42;
+  transform: scale(1.05);
+}
+
+.accessibility-menu {
+  background: white;
+  border-radius: 8px 0 0 8px;
+  box-shadow: -2px 2px 10px rgba(0,0,0,0.15);
+  padding: 15px;
+  min-width: 250px;
+  margin-top: 10px;
+  border: 1px solid #e0e0e0;
+  border-right: none;
+}
+
+.accessibility-menu h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #1a472a;
+  border-bottom: 2px solid #ff8c42;
+  padding-bottom: 8px;
+}
+
+.accessibility-option {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.accessibility-option:hover {
+  background: #e0e0e0;
+  transform: translateX(-5px);
+}
+
+.accessibility-option.active {
+  background: #1a472a;
+  color: white;
+  border-color: #1a472a;
+}
+
+.accessibility-option.active .option-icon {
+  color: white;
+}
+
+.option-icon {
+  font-size: 18px;
+  width: 30px;
+  text-align: center;
+}
+
+.option-text {
+  flex: 1;
+  text-align: left;
+}
+
+.checkmark {
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.accessibility-reset {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #ff8c42;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.accessibility-reset:hover {
+  background: #e67e22;
+  transform: translateX(-5px);
+}
+
+/* High Contrast Mode Styles */
+body.high-contrast {
+  filter: contrast(150%);
+}
+
+body.high-contrast .btn-primary {
+  background: black;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+body.high-contrast .card {
+  border: 2px solid black;
+}
+
+body.high-contrast a {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+/* Large Text Mode */
+body.large-text {
+  font-size: 120%;
+}
+
+body.large-text p,
+body.large-text li,
+body.large-text span:not(.option-text) {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+body.large-text .card-content {
+  padding: 1.5rem;
+}
+
+body.large-text .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Dyslexia Friendly Font */
+body.dyslexia-friendly {
+  font-family: 'OpenDyslexic', Arial, sans-serif;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+}
+
+body.dyslexia-friendly p,
+body.dyslexia-friendly li,
+body.dyslexia-friendly .card-content {
+  line-height: 1.6;
+}
+
+/* Mobile Responsive for Accessibility Toolbar */
+@media (max-width: 768px) {
+  .accessibility-toolbar {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .accessibility-toggle {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  
+  .accessibility-menu {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    max-width: calc(100vw - 40px);
+    min-width: 200px;
+  }
+  
+  .accessibility-option {
+    padding: 8px;
+  }
+}
+
+/* Focus indicators for accessibility */
+.accessibility-toggle:focus-visible,
+.accessibility-option:focus-visible,
+.accessibility-reset:focus-visible {
+  outline: 3px solid #ff8c42;
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #1a472a;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 10000;
+  font-weight: bold;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
