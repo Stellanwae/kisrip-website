@@ -45,7 +45,7 @@ const FeaturedProjects = ({ projects = [] }) => {
                 />
               )}
               <h3>{project.name}</h3>
-              <p className="card-location">📍 {project.location}</p>
+              <p className="card-location">🗺️ {project.location}</p>
               <span className={`status-badge ${getStatusClass(project.status)}`}>
                 {getStatusText(project.status)}
               </span>

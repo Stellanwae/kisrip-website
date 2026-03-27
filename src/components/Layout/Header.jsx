@@ -37,8 +37,8 @@ const Header = () => {
                 height="50"
               /> */}
               <div>
-                <h1>Kenya Settlements</h1>
-                <p>Redevelopment Initiative</p>
+                <h1>Kenya Informal </h1>
+                <p>Settlements Redevelopment Programme</p>
                 <span className="initiative-name">Ministry of Lands, Housing and Urban Development</span>
               </div>
             </div>
