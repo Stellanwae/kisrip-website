@@ -49,17 +49,17 @@ const HeroCarousel = () => {
         color: 'white'
       }}>
         <div style={{ padding: '0 20px' }}>
-          <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
+          <h1 className="heroh1" style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>
             Transforming Informal Settlements for Sustainable Urban Living
           </h1>
-          <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
+          <p style={{ fontSize: '1.2rem', marginBottom: '1.5rem' }}>
             A Government of Kenya initiative for inclusive housing and community development.
           </p>
-          <div>
+          <div className="hero-btns">
             <a href="/projects" className="btn btn-primary" style={{ marginRight: '1rem' }}>
               Explore Projects
             </a>
-            <a href="/news" className="btn btn-secondary">
+            <a href="/news" className="btn btn-secondary" >
               Latest Updates
             </a>
           </div>
@@ -158,7 +158,7 @@ const HeroCarousel = () => {
       </Swiper>
       
       {/* Main Hero Text - Centered */}
-      <div
+      <div className="slide-hero"
         style={{
           position: 'absolute',
           top: '50%',
@@ -172,7 +172,7 @@ const HeroCarousel = () => {
           pointerEvents: 'none',
         }}
       >
-        <h1 style={{
+        <h1 className="heroh1" style={{
           fontSize: '2rem',
           marginBottom: '0.75rem',
           textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
@@ -188,8 +188,8 @@ const HeroCarousel = () => {
         }}>
           A Government of Kenya initiative for inclusive housing and community development.
         </p>
-        <div style={{ pointerEvents: 'auto' }}>
-          <a href="/projects" className="btn btn-primary" style={{ marginRight: '1rem' }}>
+        <div className="hero-btns" style={{ pointerEvents: 'auto' }}>
+          <a href="/projects" className="btn btn-primary" style={{ marginRight: '0rem' }}>
             Explore Projects
           </a>
           <a href="/news" className="btn btn-secondary">
