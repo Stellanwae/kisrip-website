@@ -44,7 +44,7 @@
 .accessibility-menu h3 {
   margin: 0 0 10px 0;
   font-size: 16px;
-  color: #1a472a;
+  color: #065AA2;
   border-bottom: 2px solid #ff8c42;
   padding-bottom: 8px;
 }
@@ -70,9 +70,9 @@
 }
 
 .accessibility-option.active {
-  background: #1a472a;
+  background: #065AA2;
   color: white;
-  border-color: #1a472a;
+  border-color: #065AA2;
 }
 
 .accessibility-option.active .option-icon {
@@ -208,7 +208,7 @@ body.dyslexia-friendly .card-content {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #1a472a;
+  background: #065AA2;
   color: white;
   padding: 8px 16px;
   text-decoration: none;
