@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>Kenya Settlements</h3>
+          <h3>Kenya Informal Settlements Redevelopment Programme</h3>
           <p>Transforming informal settlements for sustainable urban living in Kenya.</p>
         </div>
         

@@ -30,7 +30,7 @@ const HeroCarousel = () => {
 
   if (loading) {
     return (
-      <div style={{ height: '80vh', background: '#1a472a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ height: '80vh', background: '#065AA2', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <p style={{ color: 'white' }}>Loading...</p>
       </div>
     )
