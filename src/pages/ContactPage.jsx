@@ -143,7 +143,7 @@
 
 import React, { useState } from 'react';
 
-const FORMSPREE_URL = 'https://formspree.io/f/xpqopeoa'; // 👈 Replace with your Formspree form ID
+const FORMSPREE_URL = 'https://formspree.io/f/mwvwljzk'; // 👈 Replace with your Formspree form ID
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -197,7 +197,7 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <div className="contact-container">
+      <div className="contact-container" >
         <div className="contact-info">
           <h2>Get in Touch</h2>
           <p style={{ marginBottom: '1.5rem' }}>
@@ -205,14 +205,14 @@ const ContactPage = () => {
           </p>
 
           <div style={{ marginBottom: '1rem' }}>
-            <strong>📍 Office Address</strong>
-            <p>Ministry of Lands, Housing and Urban Development<br />
+            <strong>🗺️ Office Address</strong>
+            <p> Ministry of Lands, Public Works, Housing and Urban Developement, State Department for Housing and Urban Development<br />
             Nairobi, Kenya</p>
           </div>
 
           <div style={{ marginBottom: '1rem' }}>
             <strong>📧 Email</strong>
-            <p>info@kenyasettlements.go.ke</p>
+            <p>kisrp.pm@gmail.com</p>
           </div>
 
           <div style={{ marginBottom: '1rem' }}>
