@@ -30,7 +30,7 @@ const Header = () => {
             <div className="logo-content">
               {/* Optional: Add coat of arms image when you have it */}
               <img 
-                src="/public/images/kisrp_logo.png" 
+                src="/images/kisrp_logo.png" 
                 alt="Kenya Coat of Arms" 
                 className="logo-img"
                 width="200"
