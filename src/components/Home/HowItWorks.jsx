@@ -81,7 +81,7 @@ const HowItWorks = () => {
               borderRadius: '10px',
               padding: '2rem 1.5rem',
               position: 'relative',
-              borderTop: '4px solid #1a472a',
+              // borderTop: '4px solid #1a472a',
               textAlign: 'center',
             }}>
               {/* Step number */}

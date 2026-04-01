@@ -159,7 +159,7 @@
 
 /* Add official gold border to footer */
 .footer {
-  border-top: 3px solid #ff8c42;
+  /* border-top: 3px solid #ff8c42; */
 }
 
 .footer-container {

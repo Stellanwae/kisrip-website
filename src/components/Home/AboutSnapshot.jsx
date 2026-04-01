@@ -94,7 +94,7 @@ const AboutSnapshot = () => {
               padding: '1.25rem',
               borderRadius: '8px',
               boxShadow: '0 1px 4px rgba(0,0,0,0.07)',
-              borderLeft: '4px solid #1a472a',
+              // borderLeft: '4px solid #1a472a',
             }}>
               <span style={{ fontSize: '1.5rem', flexShrink: 0 }}>{item.icon}</span>
               <div>
