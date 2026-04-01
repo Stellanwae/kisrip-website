@@ -30,7 +30,7 @@ const HeroCarousel = () => {
 
   if (loading) {
     return (
-      <div style={{ height: '80vh', background: '#065AA2', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ height: '80vh', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <p style={{ color: 'white' }}>Loading...</p>
       </div>
     )
@@ -41,7 +41,7 @@ const HeroCarousel = () => {
     return (
       <div style={{ 
         height: '80vh', 
-        background: 'linear-gradient(135deg, #1a472a 0%, #2a6a3a 100%)',
+        // background: 'linear-gradient(135deg, #1a472a 0%, #2a6a3a 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

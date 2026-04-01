@@ -39,8 +39,8 @@ const HomePage = () => {
   if (loading) {
     return (
       <>
-        <div style={{ height: '80vh', background: '#1a472a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <p style={{ color: 'white' }}>Loading...</p>
+        <div style={{ height: '80vh', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <p style={{ color: 'black' }}>Loading...</p>
         </div>
         <div className="container" style={{ textAlign: 'center', padding: '4rem' }}>
           <p>Loading content...</p>
