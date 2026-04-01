@@ -122,12 +122,12 @@ const partners = [
   {
     name: 'Government of Kenya',
     subtitle: 'Ministry of Lands, Public Works, Housing & Urban Development',
-    image: '/public/images/Govt_of_Kenya.webp', 
+    image: '/images/Govt_of_Kenya.webp', 
   },
   {
     name: 'Government of Italy',
     subtitle: 'Development Cooperation Grant — €6 Million',
-    image: '/public/images/Govt_of_Italy.webp',
+    image: '/images/Govt_of_Italy.webp',
   },
   {
     name: 'AICS',
@@ -137,17 +137,17 @@ const partners = [
   {
     name: 'County Government of Siaya',
     subtitle: 'Awelo Settlement — Siaya County',
-    image: '/public/images/County_Govt_Siaya.webp',
+    image: '/images/County_Govt_Siaya.webp',
   },
   {
     name: 'County Government of Kilifi',
     subtitle: 'Kibarani Settlement Scheme — Kilifi County',
-    image: '/public/images/County_Govt_of_Kilifi.png',
+    image: '/images/County_Govt_of_Kilifi.png',
   },
   {
     name: 'County Government of Kajiado',
     subtitle: 'Mathare Settlement — Kajiado County',
-    image: '/public/images/Kajiado-County.png',
+    image: '/images/Kajiado-County.png',
   },
 ]
 
