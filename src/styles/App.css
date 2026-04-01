@@ -10,8 +10,8 @@
 
 /* Keep your original header styles */
 .header {
-  background-color: #065AA2;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -41,10 +41,10 @@
   gap: 1rem;
 }
 
-.coat-of-arms {
-  width: 50px;
-  height: 50px;
-  filter: brightness(0) invert(1);
+.logo-img {
+  width: 100px;
+  height: 100px;
+  /* filter: brightness(0) invert(1); */
 }
 
 .logo h1 {
@@ -72,7 +72,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: black;
   font-weight: 500;
   transition: opacity 0.3s;
 }
@@ -102,7 +102,7 @@
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: black;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -118,7 +118,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #065AA2;
+    background-color: white;
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;

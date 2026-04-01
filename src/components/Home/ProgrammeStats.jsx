@@ -26,7 +26,7 @@ const stats = [
 const ProgrammeStats = () => {
   return (
     <section style={{
-      background: '#1a472a',
+      background: '#6795bc',
       padding: '3rem 1rem',
     }}>
       <div className="container">

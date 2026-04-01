@@ -29,18 +29,18 @@ const Header = () => {
           <div className="logo">
             <div className="logo-content">
               {/* Optional: Add coat of arms image when you have it */}
-              {/* <img 
-                src="/images/kenya-coat-of-arms.png" 
+              <img 
+                src="/public/images/kisrp_logo.png" 
                 alt="Kenya Coat of Arms" 
-                className="coat-of-arms"
-                width="50"
-                height="50"
-              /> */}
-              <div>
+                className="logo-img"
+                width="200"
+                height="200"
+              />
+              {/* <div>
                 <h1>Kenya Informal </h1>
                 <p>Settlements Redevelopment Programme</p>
                 <span className="initiative-name">Ministry of Lands, Housing and Urban Development</span>
-              </div>
+              </div> */}
             </div>
           </div>
           
