@@ -340,7 +340,7 @@ const AboutPage = () => {
 
         {/* Section 5 — Our Approach */}
         <section className="about-section">
-          <span className="about-overline">Our Approach</span>
+          <span className="about-overline">Our Objectives</span>
           <div className="about-two-col" style={{ marginTop: '1rem', marginBottom: '2.5rem', alignItems: 'end' }}>
             <h2 style={{ fontSize: '1.75rem', fontWeight: '700', color: '#111', margin: 0 }}>
               How We Work
@@ -353,10 +353,10 @@ const AboutPage = () => {
 
           <div className="about-four-col">
             {[
-              { step: '01', title: 'Community Mobilisation', desc: 'Community barazas are held and Residents Committees elected to ensure residents shape every decision.' },
-              { step: '02', title: 'Socio-Economic Survey', desc: 'A detailed survey captures housing conditions, service access, land ownership, and community priorities.' },
-              { step: '03', title: 'Planning & Land Regularisation', desc: 'Redevelopment plans are developed and validated, with cadastral surveys conducted to formalise tenure.' },
-              { step: '04', title: 'Infrastructure Upgrading', desc: 'Approved plans are implemented — roads, drainage, street lighting, and social facilities constructed.' },
+              { step: '01', title: 'Community Organisation', desc: 'Community barazas are held and Residents Committees elected to ensure residents shape every decision.' },
+              // { step: '02', title: 'Socio-Economic Survey', desc: 'A detailed survey captures housing conditions, service access, land ownership, and community priorities.' },
+              { step: '02', title: 'Land Tenure Security', desc: 'Redevelopment plans are developed and validated, with cadastral surveys conducted to formalise tenure.' },
+              { step: '03', title: 'Infrastructure Development', desc: 'Approved plans are implemented — roads, drainage, street lighting, and social facilities constructed.' },
             ].map((item, i) => (
               <div key={i} className="step-cell">
                 <p style={{ fontSize: '2.25rem', fontWeight: '800', color: '#D6E4F3', margin: '0 0 1rem', lineHeight: 1 }}>

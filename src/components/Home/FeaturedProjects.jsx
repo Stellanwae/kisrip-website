@@ -1,14 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+const getPlainTextPreview = (description, maxLength = 150) => {
+  if (!description) return ''
+  if (typeof description === 'string') {
+    return description.length <= maxLength ? description : description.slice(0, maxLength).trimEnd() + '...'
+  }
+  if (Array.isArray(description)) {
+    const fullText = description
+      .filter(block => block._type === 'block' && block.children)
+      .map(block => block.children.map(child => child.text).join(''))
+      .join(' ')
+    return fullText.length <= maxLength ? fullText : fullText.slice(0, maxLength).trimEnd() + '...'
+  }
+  return ''
+}
+
 const FeaturedProjects = ({ projects = [] }) => {
 
-  const truncate = (text, maxLength = 150) => {
-    if (!text) return ''
-    if (text.length <= maxLength) return text
-    return text.slice(0, maxLength).trimEnd() + '...'
-  }
-  
   const getStatusClass = (status) => {
     switch (status) {
       case 'ongoing': return 'status-ongoing'
@@ -27,9 +36,8 @@ const FeaturedProjects = ({ projects = [] }) => {
     }
   }
 
-  // Only show the first 2 featured projects
   const displayedProjects = projects.slice(0, 2)
-  console.log(typeof projects[0]?.description, projects[0]?.description)
+
   if (displayedProjects.length === 0) {
     return null
   }
@@ -66,7 +74,7 @@ const FeaturedProjects = ({ projects = [] }) => {
                 {getStatusText(project.status)}
               </span>
               <p style={{ marginTop: '1rem', color: '#666' }}>
-                {truncate(project.description, 150)}
+                {getPlainTextPreview(project.description, 150)}
               </p>
               <Link
                 to={`/projects/${project.slug}`}

@@ -38,8 +38,8 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'text',
-      rows: 4
+      type: 'array',
+      of: [{ type: 'block' }]   // ← changed from type: 'text'
     },
     {
       name: 'startDate',

@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { projectsAPI } from '../services/api'
 
+// Extracts plain text from Portable Text array for card preview
+const getPlainTextPreview = (description) => {
+  if (!description) return ''
+  if (typeof description === 'string') return description
+  if (Array.isArray(description)) {
+    return description
+      .filter(block => block._type === 'block' && block.children)
+      .map(block => block.children.map(child => child.text).join(''))
+      .join(' ')
+  }
+  return ''
+}
+
 const ProjectsPage = () => {
   const [projects, setProjects] = useState([])
   const [loading, setLoading] = useState(true)
@@ -64,41 +77,53 @@ const ProjectsPage = () => {
 
   return (
     <>
+      <style>{`
+        .project-description {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-top: 1rem;
+          color: #666;
+          line-height: 1.6;
+        }
+      `}</style>
+
       <div className="page-header">
         <div className="container">
           <h1>Our Projects</h1>
           <p>Transforming informal settlements across Kenya</p>
         </div>
       </div>
-      
+
       <div className="container">
-        {/* Filter Buttons */}
         <div style={{ marginBottom: '2rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <button 
+          <button
             onClick={() => setActiveFilter('all')}
             className={`btn ${activeFilter === 'all' ? 'btn-primary' : ''}`}
-            style={{ background: activeFilter === 'all' ? '#ff8c42' : '#666' }}
+            style={{ background: activeFilter === 'all' ? '#1E3A5F' : '#666' }}
           >
             All Projects
           </button>
-          <button 
+          <button
             onClick={() => setActiveFilter('ongoing')}
             className={`btn ${activeFilter === 'ongoing' ? 'btn-primary' : ''}`}
-            style={{ background: activeFilter === 'ongoing' ? '#ff8c42' : '#666' }}
+            style={{ background: activeFilter === 'ongoing' ? '#1E3A5F' : '#666' }}
           >
             Ongoing
           </button>
-          <button 
+          <button
             onClick={() => setActiveFilter('in-progress')}
             className={`btn ${activeFilter === 'in-progress' ? 'btn-primary' : ''}`}
-            style={{ background: activeFilter === 'in-progress' ? '#ff8c42' : '#666' }}
+            style={{ background: activeFilter === 'in-progress' ? '#1E3A5F' : '#666' }}
           >
             In Progress
           </button>
-          <button 
+          <button
             onClick={() => setActiveFilter('completed')}
             className={`btn ${activeFilter === 'completed' ? 'btn-primary' : ''}`}
-            style={{ background: activeFilter === 'completed' ? '#ff8c42' : '#666' }}
+            style={{ background: activeFilter === 'completed' ? '#1E3A5F' : '#666' }}
           >
             Completed
           </button>
@@ -114,15 +139,15 @@ const ProjectsPage = () => {
               <div key={project.id} className="card">
                 <div className="card-content">
                   {project.image && (
-                    <img 
+                    <img
                       src={project.image}
                       alt={project.name}
-                      style={{ 
-                        width: '100%', 
-                        height: '200px', 
-                        objectFit: 'cover', 
-                        borderRadius: '8px', 
-                        marginBottom: '1rem' 
+                      style={{
+                        width: '100%',
+                        height: '200px',
+                        objectFit: 'cover',
+                        borderRadius: '8px',
+                        marginBottom: '1rem'
                       }}
                     />
                   )}
@@ -131,7 +156,11 @@ const ProjectsPage = () => {
                   <span className={`status-badge ${getStatusClass(project.status)}`}>
                     {getStatusText(project.status)}
                   </span>
-                  <p style={{ marginTop: '1rem', color: '#666' }}>{project.description}</p>
+
+                  <p className="project-description">
+                    {getPlainTextPreview(project.description)}
+                  </p>
+
                   {project.startDate && (
                     <div style={{ marginTop: '1rem', fontSize: '0.875rem', color: '#888' }}>
                       <p>Start: {project.startDate}</p>

@@ -1,6 +1,37 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { projectsAPI } from '../services/api'
+import { PortableText } from '@portabletext/react'
+
+const portableTextComponents = {
+  block: {
+    normal: ({ children }) => (
+      <p style={{ marginBottom: '1rem', lineHeight: '1.8', color: '#444' }}>{children}</p>
+    ),
+    h2: ({ children }) => (
+      <h2 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#1E3A5F', margin: '2rem 0 0.75rem' }}>{children}</h2>
+    ),
+    h3: ({ children }) => (
+      <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#1E3A5F', margin: '1.5rem 0 0.5rem' }}>{children}</h3>
+    ),
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem', lineHeight: '1.8', color: '#444' }}>{children}</ul>
+    ),
+    number: ({ children }) => (
+      <ol style={{ paddingLeft: '1.5rem', marginBottom: '1rem', lineHeight: '1.8', color: '#444' }}>{children}</ol>
+    ),
+  },
+  listItem: {
+    bullet: ({ children }) => <li style={{ marginBottom: '0.4rem' }}>{children}</li>,
+    number: ({ children }) => <li style={{ marginBottom: '0.4rem' }}>{children}</li>,
+  },
+  marks: {
+    strong: ({ children }) => <strong style={{ fontWeight: '700', color: '#111' }}>{children}</strong>,
+    em: ({ children }) => <em>{children}</em>,
+  },
+}
 
 const ProjectDetail = () => {
   const { slug } = useParams()
@@ -70,6 +101,8 @@ const ProjectDetail = () => {
     )
   }
 
+  const isPortableText = Array.isArray(project.description)
+
   return (
     <>
       <div className="page-header">
@@ -78,34 +111,48 @@ const ProjectDetail = () => {
           <p>{project.location}</p>
         </div>
       </div>
-      
+
       <div className="container">
         <div style={{ background: 'white', padding: '2rem', borderRadius: '10px', marginBottom: '2rem' }}>
+
           <div style={{ marginBottom: '2rem' }}>
-            <span className={`status-badge ${getStatusClass(project.status)}`} style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}>
+            <span
+              className={`status-badge ${getStatusClass(project.status)}`}
+              style={{ fontSize: '1rem', padding: '0.5rem 1rem' }}
+            >
               {getStatusText(project.status)}
             </span>
           </div>
-          
+
           {project.image && (
-            <img 
+            <img
               src={project.image}
               alt={project.name}
-              style={{ 
-                width: '100%', 
-                maxHeight: '400px', 
-                objectFit: 'cover', 
-                borderRadius: '8px', 
-                marginBottom: '1.5rem' 
+              style={{
+                width: '100%',
+                maxHeight: '400px',
+                objectFit: 'cover',
+                borderRadius: '8px',
+                marginBottom: '1.5rem'
               }}
             />
           )}
-          
+
           <h2>Project Overview</h2>
-          <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>{project.description}</p>
-          
+          <div style={{ marginBottom: '1.5rem' }}>
+            {isPortableText
+              ? <PortableText value={project.description} components={portableTextComponents} />
+              : <p style={{ lineHeight: '1.8', color: '#444' }}>{project.description}</p>
+            }
+          </div>
+
           <h2>Key Information</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '1.5rem',
+            marginTop: '1rem'
+          }}>
             {project.startDate && (
               <div>
                 <strong>Start Date:</strong>
@@ -131,8 +178,12 @@ const ProjectDetail = () => {
               </div>
             )}
           </div>
-          
-          <Link to="/projects" className="btn btn-primary" style={{ marginTop: '2rem', display: 'inline-block' }}>
+
+          <Link
+            to="/projects"
+            className="btn btn-primary"
+            style={{ marginTop: '2rem', display: 'inline-block' }}
+          >
             ← Back to Projects
           </Link>
         </div>

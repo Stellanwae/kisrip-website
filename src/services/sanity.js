@@ -13,7 +13,7 @@ export const client = createClient({
 const builder = imageUrlBuilder(client)
 export const urlFor = (source) => builder.image(source)
 
-// Format news data - FIXED to handle both formats
+// Format news data
 export const formatNews = (item) => ({
   id: item._id,
   title: item.title,
@@ -48,12 +48,12 @@ export const formatReport = (item) => ({
   description: item.description,
   date: item.date,
   pages: item.pages,
-  pdfUrl: item.pdfFile?.asset?.url ? 
-    `https://cdn.sanity.io/files/${projectId}/production/${item.pdfFile.asset._ref.split('-')[1]}.pdf` : 
+  pdfUrl: item.pdfFile?.asset?.url ?
+    `https://cdn.sanity.io/files/${projectId}/production/${item.pdfFile.asset._ref.split('-')[1]}.pdf` :
     null
 })
 
-// NEW: Format hero slide data
+// Format hero slide data
 export const formatHeroSlide = (item) => ({
   id: item._id,
   title: item.title,
@@ -78,8 +78,8 @@ export const queries = {
     image,
     published
   }`,
-  
-  // Get single news by slug - FIXED QUERY
+
+  // Get single news by slug
   getNewsBySlug: `*[_type == "news" && slug.current == $slug][0] {
     _id,
     title,
@@ -89,7 +89,7 @@ export const queries = {
     content,
     image
   }`,
-  
+
   // Get all projects
   getAllProjects: `*[_type == "project"] | order(_createdAt desc) {
     _id,
@@ -97,14 +97,14 @@ export const queries = {
     slug,
     location,
     status,
-    description,
+    description[],
     startDate,
     completionDate,
     budget,
     beneficiaries,
     image
   }`,
-  
+
   // Get projects by status
   getProjectsByStatus: `*[_type == "project" && status == $status] {
     _id,
@@ -112,14 +112,14 @@ export const queries = {
     slug,
     location,
     status,
-    description,
+    description[],
     startDate,
     completionDate,
     budget,
     beneficiaries,
     image
   }`,
-  
+
   // Get single project by slug
   getProjectBySlug: `*[_type == "project" && slug.current == $slug][0] {
     _id,
@@ -127,14 +127,14 @@ export const queries = {
     "slug": slug.current,
     location,
     status,
-    description,
+    description[],
     startDate,
     completionDate,
     budget,
     beneficiaries,
     image
   }`,
-  
+
   // Get all reports
   getAllReports: `*[_type == "report"] | order(date desc) {
     _id,
@@ -145,7 +145,7 @@ export const queries = {
     pages,
     pdfFile
   }`,
-  
+
   // Get featured content for homepage
   getFeaturedContent: `{
     "featuredNews": *[_type == "news" && published == true] | order(date desc)[0...3] {
@@ -162,7 +162,7 @@ export const queries = {
       "slug": slug.current,
       location,
       status,
-      description,
+      description[],
       image
     },
     "featuredReports": *[_type == "report"] | order(date desc)[0...3] {
@@ -173,8 +173,8 @@ export const queries = {
       date
     }
   }`,
-  
-  // NEW: Get hero carousel slides
+
+  // Get hero carousel slides
   getHeroSlides: `*[_type == "heroSlide" && active == true] | order(order asc) {
     _id,
     title,
