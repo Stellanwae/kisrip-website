@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules'
+import { Link } from 'react-router-dom'
 import { heroSlidesAPI } from '../../services/api'
 
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/pagination'
@@ -17,7 +17,6 @@ const HeroCarousel = () => {
     const fetchSlides = async () => {
       try {
         const data = await heroSlidesAPI.getAll()
-        console.log('Hero slides loaded:', data)
         setSlides(data)
       } catch (error) {
         console.error('Error fetching hero slides:', error)
@@ -36,11 +35,10 @@ const HeroCarousel = () => {
     )
   }
 
-  // If no slides in Sanity, show default hero section
   if (slides.length === 0) {
     return (
-      <div style={{ 
-        height: '80vh', 
+      <div style={{
+        height: '80vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -55,12 +53,12 @@ const HeroCarousel = () => {
             A Government of Kenya initiative for inclusive housing and community development.
           </p>
           <div className="hero-btns">
-            <a href="/projects" className="btn btn-primary" style={{ marginRight: '1rem' }}>
+            <Link to="/projects" className="btn btn-primary" style={{ marginRight: '1rem' }}>
               Explore Projects
-            </a>
-            <a href="/news" className="btn btn-secondary" >
+            </Link>
+            <Link to="/news" className="btn btn-secondary">
               Latest Updates
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -89,7 +87,6 @@ const HeroCarousel = () => {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-              {/* Background Image */}
               <div
                 style={{
                   position: 'absolute',
@@ -103,8 +100,7 @@ const HeroCarousel = () => {
                   backgroundRepeat: 'no-repeat',
                 }}
               />
-              
-              {/* Light Overlay for better text readability */}
+
               <div
                 style={{
                   position: 'absolute',
@@ -115,11 +111,9 @@ const HeroCarousel = () => {
                   background: 'rgba(0,0,0,0.4)',
                 }}
               />
-              
-              {/* Slide Title and Description - Bottom Left */}
+
               <div
                 style={{
-                //   position: 'relative',
                   bottom: '10%',
                   left: '8%',
                   maxWidth: '500px',
@@ -127,8 +121,8 @@ const HeroCarousel = () => {
                   zIndex: 10,
                 }}
               >
-                <h2 style={{ 
-                  fontSize: '1rem', 
+                <h2 style={{
+                  fontSize: '1rem',
                   fontWeight: '600',
                   margin: '0',
                   textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
@@ -138,8 +132,8 @@ const HeroCarousel = () => {
                 }}>
                   {slide.title}
                 </h2>
-                <p style={{ 
-                  fontSize: '0.7rem', 
+                <p style={{
+                  fontSize: '0.7rem',
                   opacity: 0.9,
                   textShadow: '1px 1px 1px rgba(0,0,0,0.3)',
                   lineHeight: '1.5',
@@ -155,9 +149,9 @@ const HeroCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      
-      {/* Main Hero Text - Centered */}
-      <div className="slide-hero"
+
+      <div
+        className="slide-hero"
         style={{
           position: 'absolute',
           top: '50%',
@@ -188,12 +182,12 @@ const HeroCarousel = () => {
           A Government of Kenya initiative for inclusive housing and community development.
         </p>
         <div className="hero-btns" style={{ pointerEvents: 'auto' }}>
-          <a href="/projects" className="btn btn-primary" style={{ marginRight: '0rem' }}>
+          <Link to="/projects" className="btn btn-primary" style={{ marginRight: '0rem' }}>
             Explore Projects
-          </a>
-          <a href="/news" className="btn btn-secondary">
+          </Link>
+          <Link to="/news" className="btn btn-secondary">
             Latest Updates
-          </a>
+          </Link>
         </div>
       </div>
     </div>
