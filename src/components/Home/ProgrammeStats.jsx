@@ -26,7 +26,7 @@ const stats = [
 const ProgrammeStats = () => {
   return (
     <section style={{
-      background: '#6795bc',
+      background: '#EFF4FA',
       padding: '3rem 1rem',
     }}>
       <div className="container">
@@ -38,7 +38,7 @@ const ProgrammeStats = () => {
         }}>
           {stats.map((stat, index) => (
             <div key={index} style={{
-              color: 'white',
+              color: 'black',
               padding: '1.5rem 1rem',
               borderRight: index < stats.length - 1 ? '1px solid rgba(255,255,255,0.15)' : 'none',
             }}>
@@ -46,7 +46,7 @@ const ProgrammeStats = () => {
               <div style={{
                 fontSize: '2.5rem',
                 fontWeight: '700',
-                color: '#f0c84b',
+                color: '#1E3A5F',
                 marginBottom: '0.5rem',
                 lineHeight: 1,
               }}>

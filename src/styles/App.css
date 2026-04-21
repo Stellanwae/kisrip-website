@@ -1,6 +1,6 @@
 /* Government official colors - added as CSS variables */
 :root {
-  --government-blue: #065AA2 ;
+  --government-blue: #1E3A5F ;
   --government-gold: #ff8c42;
   --government-red: #b22234;
   --government-black: #000000;
@@ -12,7 +12,7 @@
 .header {
   background-color: white;
   color: black;
-  padding: 1rem 0;
+  /*padding: 1rem 0; */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -21,7 +21,7 @@
 
 /* Add scroll effect without breaking layout */
 .header-scrolled {
-  padding: 0.5rem 0;
+  padding: 0;
   transition: all 0.3s;
 }
 
@@ -31,7 +31,7 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
 }
 
 /* Update logo to include government branding */
@@ -42,8 +42,8 @@
 }
 
 .logo-img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   /* filter: brightness(0) invert(1); */
 }
 
@@ -95,7 +95,7 @@
 
 .language-switch:hover {
   background: white;
-  color: #054680;
+  color: #1E3A5F;
 }
 
 .mobile-menu-btn {
@@ -135,10 +135,10 @@
     gap: 0.5rem;
   }
   
-  .coat-of-arms {
+  /* .coat-of-arms {
     width: 40px;
     height: 40px;
-  }
+  } */
   
   .logo h1 {
     font-size: 1.2rem;
@@ -151,7 +151,7 @@
 
 /* Keep your original footer styles */
 .footer {
-  background-color: #054680;
+  background-color: #1E3A5F;
   color: white;
   padding: 3rem 0 1rem;
   margin-top: auto;
@@ -246,12 +246,13 @@
 }
 
 .btn-primary {
-  background-color: #ff8c42;
+  background-color: #63921F;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #e67e22;
+  background-color: white;
+  color: #1E3A5F;
   transform: translateY(-2px);
 }
 
@@ -263,7 +264,7 @@
 
 .btn-secondary:hover {
   background-color: white;
-  color: #054680;
+  color: #1E3A5F;
   transform: translateY(-2px);
 }
 
@@ -294,7 +295,7 @@
 
 .card h3 {
   margin-bottom: 0.5rem;
-  color: #1a472a;
+  color: #1E3A5F;
 }
 
 .card-location, .card-status {
@@ -350,13 +351,13 @@
 }
 
 .report-item:hover {
-  border-color: #065AA2;
+  border-color: #1E3A5F;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .report-item h3 {
   margin-bottom: 0.5rem;
-  color: #065AA2;
+  color: #1E3A5F;
 }
 
 .report-item p {
@@ -366,7 +367,7 @@
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(135deg,#065AA2 0%, #3378b5 100%);
+  background: linear-gradient(135deg,#1E3A5F 0%, #3378b5 100%);
   color: white;
   padding: 3rem 0;
   text-align: center;
@@ -396,7 +397,7 @@
 }
 
 .contact-form {
-  background: white;
+  background: #EFF4FA;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -464,5 +465,5 @@
 }
 
 .data-protection a {
-  color: #065AA2;
+  color: #1E3A5F;
 }

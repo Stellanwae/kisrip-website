@@ -16,7 +16,7 @@ const AboutSnapshot = () => {
         {/* Text Side */}
         <div>
           <p style={{
-            color: '#1a472a',
+            color: '#1E3A5F',
             fontWeight: '600',
             fontSize: '0.9rem',
             textTransform: 'uppercase',
@@ -94,11 +94,10 @@ const AboutSnapshot = () => {
               padding: '1.25rem',
               borderRadius: '8px',
               boxShadow: '0 1px 4px rgba(0,0,0,0.07)',
-              // borderLeft: '4px solid #1a472a',
             }}>
               <span style={{ fontSize: '1.5rem', flexShrink: 0 }}>{item.icon}</span>
               <div>
-                <h4 style={{ margin: '0 0 0.25rem', color: '#1a472a', fontSize: '1rem' }}>
+                <h4 style={{ margin: '0 0 0.25rem', color: '#1E3A5F', fontSize: '1rem' }}>
                   {item.title}
                 </h4>
                 <p style={{ margin: 0, color: '#555', fontSize: '0.9rem', lineHeight: '1.5' }}>

@@ -38,7 +38,7 @@ const FeaturedProjects = ({ projects = [] }) => {
     <section className="container" style={{ marginBottom: '3rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
         <h2 style={{ margin: 0 }}>Featured Projects</h2>
-        <Link to="/projects" style={{ fontSize: '0.9rem', color: '#1a472a', fontWeight: '600' }}>
+        <Link to="/projects" style={{ fontSize: '0.9rem', color: '#1E3A5F', fontWeight: '600' }}>
           View All Projects →
         </Link>
       </div>

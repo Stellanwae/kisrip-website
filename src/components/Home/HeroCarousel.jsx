@@ -41,7 +41,6 @@ const HeroCarousel = () => {
     return (
       <div style={{ 
         height: '80vh', 
-        // background: 'linear-gradient(135deg, #1a472a 0%, #2a6a3a 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

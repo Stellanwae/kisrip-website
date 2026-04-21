@@ -4,28 +4,28 @@ const steps = [
   {
     number: '01',
     icon: '📋',
-    title: 'Community Mobilisation',
+    title: 'Community Organisation',
     description:
       'Engagement begins with community barazas and the election of Residents Committees to ensure residents have a voice in every stage of the redevelopment process.',
   },
+  // {
+  //   number: '02',
+  //   icon: '📊',
+  //   title: 'Socio-Economic Survey',
+  //   description:
+  //     'A detailed survey of each settlement captures demographic data, housing conditions, service access levels, land ownership status, and priority community needs.',
+  // },
   {
     number: '02',
-    icon: '📊',
-    title: 'Socio-Economic Survey',
-    description:
-      'A detailed survey of each settlement captures demographic data, housing conditions, service access levels, land ownership status, and priority community needs.',
-  },
-  {
-    number: '03',
     icon: '🗺️',
-    title: 'Planning & Land Regularisation',
+    title: 'Land Tenure Security',
     description:
       'Technical teams develop redevelopment plans, conduct cadastral surveys, and work to formalise land tenure — giving residents legally recognised ownership of their land.',
   },
   {
-    number: '04',
+    number: '03',
     icon: '🏗️',
-    title: 'Infrastructure Upgrading',
+    title: 'Infrastructure Development',
     description:
       'Approved plans are implemented through construction of roads, drainage systems, street lighting, and social facilities such as health centres and schools.',
   },
@@ -40,14 +40,14 @@ const HowItWorks = () => {
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <p style={{
-            color: '#1a472a',
+            color: '#1E3A5F',
             fontWeight: '600',
             fontSize: '0.9rem',
             textTransform: 'uppercase',
             letterSpacing: '1px',
             marginBottom: '0.5rem',
           }}>
-            Our Approach
+            Our Objectives
           </p>
           <h2 style={{
             fontSize: '1.8rem',
@@ -81,7 +81,6 @@ const HowItWorks = () => {
               borderRadius: '10px',
               padding: '2rem 1.5rem',
               position: 'relative',
-              // borderTop: '4px solid #1a472a',
               textAlign: 'center',
             }}>
               {/* Step number */}
@@ -89,7 +88,7 @@ const HowItWorks = () => {
                 position: 'absolute',
                 top: '-1px',
                 right: '1.25rem',
-                background: '#1a472a',
+                background: '#1E3A5F',
                 color: 'white',
                 fontSize: '0.7rem',
                 fontWeight: '700',
@@ -97,14 +96,14 @@ const HowItWorks = () => {
                 borderRadius: '0 0 4px 4px',
                 letterSpacing: '1px',
               }}>
-                STEP {step.number}
+                PILLAR {step.number}
               </div>
 
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{step.icon}</div>
               <h3 style={{
                 fontSize: '1.05rem',
                 fontWeight: '700',
-                color: '#1a472a',
+                color: '#1E3A5F',
                 marginBottom: '0.75rem',
               }}>
                 {step.title}

@@ -12,7 +12,7 @@
 .accessibility-toggle {
   width: 50px;
   height: 50px;
-  background-color: #2763a4;
+  background-color: #1E3A5F;
   color: white;
   border: none;
   border-radius: 8px 0 0 8px;
@@ -26,7 +26,7 @@
 }
 
 .accessibility-toggle:hover {
-  background-color: #ff8c42;
+  background-color: white;
   transform: scale(1.05);
 }
 
@@ -44,8 +44,8 @@
 .accessibility-menu h3 {
   margin: 0 0 10px 0;
   font-size: 16px;
-  color: #065AA2;
-  border-bottom: 2px solid #ff8c42;
+  color: #1E3A5F;
+  border-bottom: 2px solid #1E3A5F;
   padding-bottom: 8px;
 }
 
@@ -70,9 +70,9 @@
 }
 
 .accessibility-option.active {
-  background: #065AA2;
+  background: #1E3A5F;
   color: white;
-  border-color: #065AA2;
+  border-color: #1E3A5F;
 }
 
 .accessibility-option.active .option-icon {
@@ -100,7 +100,7 @@
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background: #ff8c42;
+  background: #1E3A5F;
   color: white;
   border: none;
   border-radius: 6px;
@@ -110,7 +110,8 @@
 }
 
 .accessibility-reset:hover {
-  background: #e67e22;
+  background: #EFF4FA;
+  color: black;
   transform: translateX(-5px);
 }
 
