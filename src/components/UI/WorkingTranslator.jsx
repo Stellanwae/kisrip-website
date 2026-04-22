@@ -10,7 +10,7 @@ const WorkingTranslator = () => {
     <button 
       onClick={openGoogleTranslate}
       style={{
-        background: '#1E3A5F',
+        background: '#63921F',
         border: 'none',
         color: 'white',
         padding: '8px 16px',

@@ -8,8 +8,8 @@ const CookieConsentBanner = () => {
       buttonText="Accept"
       declineButtonText="Decline"
       cookieName="government-website-consent"
-      style={{ background: '#1a472a', padding: '15px', zIndex: 9999 }}
-      buttonStyle={{ background: '#ff8c42', color: 'white', fontWeight: 'bold', borderRadius: '4px' }}
+      style={{ background: '#1E3A5F', padding: '15px', zIndex: 9999 }}
+      buttonStyle={{ background: '#63921F', color: 'white', fontWeight: 'bold', borderRadius: '4px' }}
       declineButtonStyle={{ background: '#666', color: 'white', borderRadius: '4px' }}
       enableDeclineButton
       expires={365}

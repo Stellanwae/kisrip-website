@@ -102,28 +102,28 @@ const ProjectsPage = () => {
           <button
             onClick={() => setActiveFilter('all')}
             className={`btn ${activeFilter === 'all' ? 'btn-primary' : ''}`}
-            style={{ background: activeFilter === 'all' ? '#1E3A5F' : '#666' }}
+            style={{ background: activeFilter === 'all' ? '#63921F' : '#666' }}
           >
             All Projects
           </button>
           <button
             onClick={() => setActiveFilter('ongoing')}
             className={`btn ${activeFilter === 'ongoing' ? 'btn-primary' : ''}`}
-            style={{ background: activeFilter === 'ongoing' ? '#1E3A5F' : '#666' }}
+            style={{ background: activeFilter === 'ongoing' ? '#63921F' : '#666' }}
           >
             Ongoing
           </button>
           <button
             onClick={() => setActiveFilter('in-progress')}
             className={`btn ${activeFilter === 'in-progress' ? 'btn-primary' : ''}`}
-            style={{ background: activeFilter === 'in-progress' ? '#1E3A5F' : '#666' }}
+            style={{ background: activeFilter === 'in-progress' ? '#63921F' : '#666' }}
           >
             In Progress
           </button>
           <button
             onClick={() => setActiveFilter('completed')}
             className={`btn ${activeFilter === 'completed' ? 'btn-primary' : ''}`}
-            style={{ background: activeFilter === 'completed' ? '#1E3A5F' : '#666' }}
+            style={{ background: activeFilter === 'completed' ? '#63921F' : '#666' }}
           >
             Completed
           </button>

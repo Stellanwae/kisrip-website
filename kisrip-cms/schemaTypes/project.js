@@ -24,6 +24,23 @@ export default {
       type: 'string'
     },
     {
+      name: 'coordinates',
+      title: 'Coordinates',
+      type: 'object',
+      fields: [
+        {
+          name: 'lat',
+          title: 'Latitude',
+          type: 'number'
+        },
+        {
+          name: 'lng',
+          title: 'Longitude',
+          type: 'number'
+        }
+      ]
+    },
+    {
       name: 'status',
       title: 'Status',
       type: 'string',
@@ -39,7 +56,7 @@ export default {
       name: 'description',
       title: 'Description',
       type: 'array',
-      of: [{ type: 'block' }]   // ← changed from type: 'text'
+      of: [{ type: 'block' }]
     },
     {
       name: 'startDate',

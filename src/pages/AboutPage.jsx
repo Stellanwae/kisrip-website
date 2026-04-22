@@ -200,7 +200,7 @@ const AboutPage = () => {
                 { label: 'Grant', value: '€6 Million' },
                 { label: 'Duration', value: '2025 – 2028' },
                 { label: 'Target Counties', value: 'Siaya · Kilifi · Kajiado' },
-                { label: 'Target Settlements', value: 'Awelo · Kibarani · Umoja Estate' },
+                { label: 'Target Settlements', value: 'Awelo · Kiwandani · Umoja Estate' },
               ].map((item, i) => (
                 <div key={i} className="glance-row">
                   <span style={{ fontSize: '0.75rem', color: '#999', textTransform: 'uppercase', letterSpacing: '0.5px' }}>

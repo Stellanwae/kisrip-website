@@ -70,7 +70,7 @@
 }
 
 .accessibility-option.active {
-  background: #1E3A5F;
+  background: #63921F;
   color: white;
   border-color: #1E3A5F;
 }
@@ -100,7 +100,7 @@
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background: #1E3A5F;
+  background: #63921F;
   color: white;
   border: none;
   border-radius: 6px;

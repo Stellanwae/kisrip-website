@@ -37,7 +37,8 @@ export const formatProject = (item) => ({
   completionDate: item.completionDate,
   budget: item.budget,
   beneficiaries: item.beneficiaries,
-  image: item.image ? urlFor(item.image).url() : null
+  image: item.image ? urlFor(item.image).url() : null,
+  coordinates: item.coordinates ?? null,
 })
 
 // Format report data
@@ -102,7 +103,8 @@ export const queries = {
     completionDate,
     budget,
     beneficiaries,
-    image
+    image,
+    coordinates
   }`,
 
   // Get projects by status
@@ -117,7 +119,8 @@ export const queries = {
     completionDate,
     budget,
     beneficiaries,
-    image
+    image,
+    coordinates
   }`,
 
   // Get single project by slug
@@ -132,7 +135,8 @@ export const queries = {
     completionDate,
     budget,
     beneficiaries,
-    image
+    image,
+    coordinates
   }`,
 
   // Get all reports
@@ -163,7 +167,8 @@ export const queries = {
       location,
       status,
       description[],
-      image
+      image,
+      coordinates
     },
     "featuredReports": *[_type == "report"] | order(date desc)[0...3] {
       _id,

@@ -88,7 +88,7 @@ const HowItWorks = () => {
                 position: 'absolute',
                 top: '-1px',
                 right: '1.25rem',
-                background: '#1E3A5F',
+                background: '#63921F',
                 color: 'white',
                 fontSize: '0.7rem',
                 fontWeight: '700',

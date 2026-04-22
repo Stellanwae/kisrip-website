@@ -252,6 +252,7 @@
 
 .btn-primary:hover {
   background-color: white;
+  /* color: #1E3A5F; */
   transform: translateY(-2px);
 }
 
