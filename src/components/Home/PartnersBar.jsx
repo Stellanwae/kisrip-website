@@ -23,7 +23,7 @@ const partners = [
   },
   {
     name: 'County Government of Kilifi',
-    subtitle: 'Kibarani Settlement Scheme — Kilifi County',
+    subtitle: 'Kibawandani Settlement Scheme — Kilifi County',
     image: '/images/County_Govt_of_Kilifi.png',
   },
   {
